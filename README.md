@@ -3,5 +3,6 @@ Mobile Application for Android OS developed at San Francisco State University, w
 
 Technologies used: Android Studio, JAVA, JSON, Volley API, Meetup API
 Short video demonstration: https://youtu.be/Jy_ZICNDzks
+
 Students involved in the project: Jonas Vinter-Jensen and Raz Hakobyan
 
