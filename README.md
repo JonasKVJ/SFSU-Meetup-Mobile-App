@@ -1,5 +1,5 @@
 # Meetup-Mobile-App
-Mobile Application for Android OS developed at San Francisco State University, which uses Meetup API, JSON and JAVA to find and display nearby Meetup users. The .java files displayed in this repository are for showcasing purposes only and only encompass a small part of the entire project and the total duration of the project was 1 semester. 
+Mobile Application for Android OS developed at San Francisco State University, which uses Meetup API, JSON and JAVA to find and display nearby Meetup users. The .java files displayed in this repository are for showcasing purposes only and only encompass a small part of the entire project and the project lasted for 1 semester.  
 Technologies used: Android Studio, JAVA, JSON, Volley API, Meetup API
 
 Short video demonstration: https://youtu.be/Jy_ZICNDzks
