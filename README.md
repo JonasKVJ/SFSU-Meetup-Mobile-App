@@ -7,7 +7,7 @@ Areas of the project which I had the majority/sole responsibility for include:
 
 Technologies used: Android Studio, JAVA, JSON (parsing), Volley API, Meetup API, Github & Git, Netbeans, Native App Development, XML (very little)
 
-The repository containing the complete project and official description are regrettably not accessible to anyone except the collaborators, but anything that can be used to judge the coding style of the team has been reposted here. Please keep in mind that the organization of the original project has every file organized in folders according to MVC, which this repost does not capture. 
+As the majority of my coding  was focused on location tracking, only that code has been reposted, but other small areas of responsibility include setting up simple accessors and mutators, or discussing with the other team member how solve an issue. Please keep in mind that the organization of the original project has every file organized in folders according to MVC, which this repost does not capture.
 
-Students involved in the project: Jonas Vinter-Jensen and Raz Hakobyan
+Students involved in the project: Jonas Vinter-Jensen and Razmik Hakobyan
 
