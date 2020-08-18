@@ -8,7 +8,8 @@ Native Android Application developed at San Francisco State University, which al
 
 As the majority of my coding  was focused on location tracking, only that code has been reposted, but other small areas of responsibility include setting up simple accessors and mutators, or discussing with the other team member how solve an issue. Please keep in mind that the organization of the original project has every file organized in folders according to MVC, which this repost does not capture.
 
-Technologies used: Android Studio, JAVA, JSON (parsing), Volley API, Meetup API, Github & Git, Netbeans, Native App Development, XML (very little)
+## Technologies 
+Android Studio, JAVA, JSON (parsing), Volley API, Meetup API, Github & Git, Netbeans, Native App Development, XML (very little)
 
 Students involved in the project: Jonas Vinter-Jensen and Razmik Hakobyan
 
