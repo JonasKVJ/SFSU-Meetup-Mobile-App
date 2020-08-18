@@ -11,5 +11,6 @@ As the majority of my coding  was focused on location tracking, only that code h
 ## Technologies 
 Android Studio, JAVA, JSON (parsing), Volley API, Meetup API, Github & Git, Netbeans, Native App Development, XML (very little)
 
-Students involved in the project: Jonas Vinter-Jensen and Razmik Hakobyan
+## Participants
+Jonas Vinter-Jensen and Razmik Hakobyan
 
