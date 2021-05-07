@@ -1,5 +1,5 @@
 # Meetup-Mobile-App
-Native Android Application developed at San Francisco State University, which allows for searching and displaying of Meetup.com groups based on the current location of the user. The project lasted for one semester, was built from scratch and was almost entirely remote, while including subjects such as design patterns (Singleton and Factory) and lambda expressions. 
+Native Android Application developed at San Francisco State University, which allows the user to search for and display Meetup.com groups based on their current location. The project lasted for one semester, was built from scratch and was almost entirely remote, while including subjects such as design patterns (Singleton and Factory) and lambda expressions. 
 
 ## Main Responsibilities
 - Location-based construction of URL query string by using Android LocationManager
