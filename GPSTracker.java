@@ -15,64 +15,68 @@ import android.util.Log;
 
 import com.example.MeetupsEventBrowser.R;
 
+//Extend from Service so the GPSTracker object below can get the Context. This allows GPSTracker to 'see' what is going on, with for e.g. 
+//the location of the device. 
 public class GPSTracker extends Service implements LocationListener
 {
 
-    // Get Class Name
+    //Get Class Name
     private static String TAG = GPSTracker.class.getName();
 
     private final Context mContext;
 
-    // flag for GPS Status
+    //Flag for GPS Status
     boolean isGPSEnabled = false;
 
-    // flag for network status
+    //Flag for network status
     boolean isNetworkEnabled = false;
 
-    // flag for GPS Tracking is enabled
+    //Flag for GPS Tracking is enabled
     boolean isGPSTrackingEnabled = false;
 
     Location location;
     private double latitude = 0.0;
     private double longitude = 0.0;
 
-    // The minimum distance to change updates in meters
-    private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 10; // 10 meters
+    //The minimum distance to change updates in meters
+    private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 10;
 
-    // The minimum time between updates in milliseconds
-    private static final long MIN_TIME_BW_UPDATES = 1000 * 10 * 1; // 1 minute
+    //The minimum time between updates in milliseconds
+    private static final long MIN_TIME_BW_UPDATES = 1000 * 10 * 1; //1 minute
 
-    // Declaring a Location Manager
+    //Declaring a Location Manager
     protected LocationManager locationManager;
 
-    // Store LocationManager.GPS_PROVIDER or LocationManager.NETWORK_PROVIDER information
+    //Store LocationManager.GPS_PROVIDER or LocationManager.NETWORK_PROVIDER information
     private String provider_info;
 
+    
     public GPSTracker(Context context)
     {
+        //The context is needed as a form of hook that allows access to the location data
         this.mContext = context;
         getLocation();
     }
 
 
     /**
-     * Try to get my current location by GPS or Network Provider
+     * Try to get the current location by GPS or Network Provider
      */
     public void getLocation()
     {
-
+        //Try is used so that an exception is thrown and caught if it is not possible to get the location data for any reason. 
         try
         {
             locationManager = (LocationManager) mContext.getSystemService(LOCATION_SERVICE);
 
-            //getting GPS status
+            //Getting GPS status
             isGPSEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
 
-            //getting network status
+            //Getting network status
             isNetworkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
 
-            // Try to get location if you GPS Service is enabled
+            //Try to get location if the GPS Service is enabled
             if (isGPSEnabled)
             {
                 this.isGPSTrackingEnabled = true;
@@ -82,9 +86,8 @@ public class GPSTracker extends Service implements LocationListener
                 /*
                  * This provider determines location using
                  * satellites. Depending on conditions, this provider may take a while to return
-                 * a location fix.
+                 * a location.
                  */
-
                 provider_info = LocationManager.GPS_PROVIDER;
 
             } else if (isNetworkEnabled)
@@ -99,7 +102,6 @@ public class GPSTracker extends Service implements LocationListener
                  * by means of a network lookup.
                  */
                 provider_info = LocationManager.NETWORK_PROVIDER;
-
             }
 
             // Application can use GPS or Network Provider
@@ -114,14 +116,12 @@ public class GPSTracker extends Service implements LocationListener
 
                 if (locationManager != null)
                 {
-                    //location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
                     location = locationManager.getLastKnownLocation(provider_info);
                     updateGPSCoordinates();
                 }
             }
         } catch (Exception e)
         {
-            //e.printStackTrace();
             Log.e(TAG, "Impossible to connect to LocationManager", e);
         }
     }
@@ -180,7 +180,7 @@ public class GPSTracker extends Service implements LocationListener
 
     /**
      * Stop using GPS listener
-     * Calling this method will stop using GPS in your app
+     * Calling this method will prevent GPS from being used in the app 
      */
     public void stopUsingGPS()
     {
