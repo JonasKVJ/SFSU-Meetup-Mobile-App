@@ -1,3 +1,5 @@
+**Warning: this project contains low quality code!**
+
 # Meetup-Mobile-App
 Native Android Application developed at San Francisco State University, which allows the user to search for and display Meetup.com groups based on their current location. The project lasted for one semester and was built from scratch. 
 
